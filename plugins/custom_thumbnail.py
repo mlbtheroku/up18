@@ -84,6 +84,6 @@ async def show_thumb(bot, update):
     elif thumb_image_path is None:
         await bot.send_message(
             chat_id=update.chat.id,
-            text="No Thumbnail Found",
+            text="<b>🌟 No Thumbnail Found</b>",
             reply_to_message_id=update.message_id
         )
