@@ -3,67 +3,62 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 class Translation(object):
 
     START_TEXT = """
-Hello {} , I'am a url to telegram file or media uploader bot with permanent thumbnail support.
+<b>Hey {} </b>
 
-Made by @Mo_Tech_YT
+<b>I am Telegram Most Powerful Url Uploader Bot</b>
+
+<b>I can Upload Any Link in File or Video</b>
+
+<b>Use Help Command to Know How to Use me</b>
+
+<b>Made With 💕 By </b><b>@Tellybots_4u</b>
 """
     HELP_TEXT = """
-<b><u>Link to Media or File</u></b>
-➠ Send a link for upload to telegram file or media.
+<b>Link to Media or File</b>
+➠ Send a link for upload to telegram file or media.</b>
 
-<b><u>Set Thumbnail</u></b>
-➠ Send a photo to make it as permanent thumbnail.
+<b>Set Thumbnail</b>
+➠ Send a photo to make it as permanent thumbnail.</b>
 
-<b><u>Deleting Thumbnail</u></b>
-➠ Send /delthumb to deleting thumbnail.
+<b>Deleting Thumbnail</b>
+➠ Send /delthumbnail to delete thumbnail.</b>
 
-<b><u>Show Thumbnail</u></b>
-➠ Send /showthumb to view custom thumbnail.
+<b>Show Thumbnail</b>
+➠ <b>Send /viewthumbnail to view custom thumbnail.</b>
 
-Made by @Mo_Tech_YT
+<b>Made With 💕 By</b><b> @Tellybots_4u</b>
 """
     ABOUT_TEXT = """
-- **Bot :** URL Uploader
-- **Creator :** [Mrk](https://telegram.dog/Mrk_YT)
-- **Channel :** [MoTech](https://telegram.dog/Mo_Tech_YT)
-- **Credits :** `Everyone in this journey`
-- **Source :** [Click here](https://github.com/MRK-YT/MT-URL-Uploader)
-- **Language :** [Python3](https://python.org)
-- **Library :** [Pyrogram v1.2.0](https://pyrogram.org)
-- **Server :** [Heroku](https://heroku.com)
-- **Tutorial :** [Video](https://youtu.be/nRSbkf3memQ)
+- **🤖 Bot :** URL Uploader\n
+- **👲 Developer :** [Tellybots_4u](https://telegram.me/tellybots_4u)\n
+- **👥 Channel :** [Fayas Noushad](https://telegram.me/tellybots_4u)\n
+- **❄️ Credits :** Everyone in this journey\n
+- **🍴 Source :** [Click here](https://t.me/tellybots_digital)\n
+- **📝 Language :** [Python3](https://python.org)\n
+- **📚 Library :** [Pyrogram v1.2.0](https://pyrogram.org)\n
+- **🌟 Server :** [Heroku](https://heroku.com)\n
 """
     START_BUTTONS = InlineKeyboardMarkup(
         [[
-        InlineKeyboardButton('🗣️𝙶𝚛𝚘𝚞𝚙', url='https://t.me/Mo_tech_group'),
-        InlineKeyboardButton('🤖Bot List', url='https://t.me/Mo_Tech_YT/176'),
-        InlineKeyboardButton('👨‍💻Source', url='https://youtu.be/nRSbkf3memQ')
+        InlineKeyboardButton('🤖 Update Channel', url='https://telegram.me/tellybots_4u'),
+        InlineKeyboardButton('💬 Support Group', url='https://telegram.me/tellybots_support')
         ],[
-        InlineKeyboardButton('Help', callback_data='help'),
-        InlineKeyboardButton('About', callback_data='about'),
-        InlineKeyboardButton('Close', callback_data='close')
+        InlineKeyboardButton('❔ Help', callback_data='help'),
+        InlineKeyboardButton('⛔ Close', callback_data='close')
         ]]
     )
     HELP_BUTTONS = InlineKeyboardMarkup(
         [[
-        InlineKeyboardButton('🗣️𝙶𝚛𝚘𝚞𝚙', url='https://t.me/Mo_tech_group'),
-        InlineKeyboardButton('🤖Bot List', url='https://t.me/Mo_Tech_YT/176'),
-        InlineKeyboardButton('👨‍💻Source', url='https://youtu.be/nRSbkf3memQ')
-        ],[
-        InlineKeyboardButton('Home', callback_data='home'),
-        InlineKeyboardButton('About', callback_data='about'),
-        InlineKeyboardButton('Close', callback_data='close')
+        InlineKeyboardButton('🏡 Home', callback_data='home'),
+        InlineKeyboardButton('👲 About', callback_data='about'),
+        InlineKeyboardButton('⛔ Close', callback_data='close')
         ]]
     )
     ABOUT_BUTTONS = InlineKeyboardMarkup(
         [[
-        InlineKeyboardButton('🗣️𝙶𝚛𝚘𝚞𝚙', url='https://t.me/Mo_tech_group'),
-        InlineKeyboardButton('🤖Bot List', url='https://t.me/Mo_Tech_YT/176'),
-        InlineKeyboardButton('👨‍💻Source', url='https://youtu.be/nRSbkf3memQ')
-        ],[
-        InlineKeyboardButton('Home', callback_data='home'),
-        InlineKeyboardButton('Help', callback_data='help'),
-        InlineKeyboardButton('Close', callback_data='close')
+        InlineKeyboardButton('🏡 Home', callback_data='home'),
+        InlineKeyboardButton('❔ Help', callback_data='help'),
+        InlineKeyboardButton('⛔ Close', callback_data='close')
         ]]
     )
     FORMAT_SELECTION = """<b>Select the desired format:</b> <a href='{}'>file size might be approximate</a>
