@@ -262,7 +262,6 @@ async def echo(bot, update):
                 ),
                 InlineKeyboardButton(
                     "🗂️File",
-",
                     callback_data=(cb_string_file).encode("UTF-8")
                 )
             ])
