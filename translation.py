@@ -21,10 +21,10 @@ class Translation(object):
 ➠ Send a photo to make it as permanent thumbnail.</b>
 
 <b>Deleting Thumbnail</b>
-➠ Send /delthumbnail to delete thumbnail.</b>
+➠ Send /delthumb to delete thumbnail.</b>
 
 <b>Show Thumbnail</b>
-➠ <b>Send /viewthumbnail to view custom thumbnail.</b>
+➠ <b>Send /to view custom thumbnail.</b>
 
 <b>Made With 💕 By</b><b> @Tellybots_4u</b>
 """
