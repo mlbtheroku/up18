@@ -36,7 +36,7 @@ async def save_photo(bot, update):
         )
         await bot.send_message(
             chat_id=update.chat.id,
-            text="**Thumbnail saved successfully**",
+            text="**Your Thumbnail Saved Successfully**",
             reply_to_message_id=update.message_id
         )
 
@@ -84,6 +84,6 @@ async def show_thumb(bot, update):
     elif thumb_image_path is None:
         await bot.send_message(
             chat_id=update.chat.id,
-            text="no thumbnail found",
+            text="No Thumbnail Found",
             reply_to_message_id=update.message_id
         )
