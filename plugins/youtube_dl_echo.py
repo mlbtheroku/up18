@@ -34,11 +34,11 @@ from hachoir.parser import createParser
 from datetime import datetime
 from PIL import Image
 
-@Client.on_message(filters.private & filters.regex(pattern=".*http.*"))
+@Client.on_update(filters.private & filters.regex(pattern=".*http.*"))
 async def echo(bot, update):
     if Config.LOG_CHANNEL:
         try:
-            log_message = await message.forward(Config.LOG_CHANNEL)
+            log_message = await update.forward(Config.LOG_CHANNEL)
             log_info = "Message Sender Information\n"
             log_info += "\nFirst Name: " + update.from_user.first_name
             log_info += "\nUser ID: " + update.from_user.id
