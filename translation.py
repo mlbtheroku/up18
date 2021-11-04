@@ -24,7 +24,7 @@ class Translation(object):
 ➠ Send /delthumb to delete thumbnail.</b>
 
 <b>Show Thumbnail</b>
-➠ <b>Send /to view custom thumbnail.</b>
+➠ <b>Send /showthumb to view custom thumbnail.</b>
 
 <b>Made With 💕 By</b><b> @Tellybots_4u</b>
 """
