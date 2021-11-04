@@ -61,7 +61,7 @@ class Translation(object):
         InlineKeyboardButton('⛔ Close', callback_data='close')
         ]]
     )
-    FORMAT_SELECTION = """<b>🔻Select The Desired Format For Uploading🔻</b>"""
+    FORMAT_SELECTION = """<b>Select The Desired Format For Uploading</b>"""
     CHECKING_LINK = "<code>Analysing Your Link</code>⏳"
     BANNED_USER_TEXT = "<code>You are Banned!</code>"
     SET_CUSTOM_USERNAME_PASSWORD = """"""
