@@ -200,7 +200,7 @@ async def youtube_dl_call_back(bot, update):
                 await bot.edit_message_text(text=Translation.UPLOAD_START, chat_id=update.message.chat.id, message_id=update.message.message_id)
             except:
                 pass
-            # get the correct width, height, and duration for videos greater than 10MB
+            # get the correct width, , height, and duration for videos greater than 10MB
             width = 0
             height = 0
             duration = 0
@@ -209,6 +209,16 @@ async def youtube_dl_call_back(bot, update):
                 if metadata is not None:
                     if metadata.has("duration"):
                         duration = metadata.get('duration').seconds
+
+            thumb_image_path = Config.DOWNLOAD_LOCATION + \
+                "/" + str(update.from_user.id) + ".jpg"
+
+            if not os.path.exists(thumb_image_path):
+                mes = await thumb(update.from_user.id)
+                if mes != None:
+                    m = await bot.get_messages(update.message.chat.id, mes.msg_id)
+                    await m.download(file_name=thumb_image_path)
+                    thumb_image_path = thumb_image_path
 
             if os.path.exists(thumb_image_path):
                 width = 0
@@ -233,7 +243,6 @@ async def youtube_dl_call_back(bot, update):
 
             start_time = time.time()
             if tg_send_type == "audio":
-                await update.message.reply_to_message.reply_chat_action("upload_audio")
                 await bot.send_audio(
                     chat_id=update.message.chat.id,
                     audio=download_directory,
@@ -242,8 +251,9 @@ async def youtube_dl_call_back(bot, update):
                     duration=duration,
                     # performer=response_json["uploader"],
                     # title=response_json["title"],
-                    reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('⚙ Join Updates Channel ⚙', url='https://telegram.me/tellybots_4u')]]),
+                    # reply_markup=reply_markup,
                     thumb=thumb_image_path,
+                    reply_to_message_id=update.message.reply_to_message.message_id,
                     progress=progress_for_pyrogram,
                     progress_args=(
                         Translation.UPLOAD_START,
@@ -252,14 +262,13 @@ async def youtube_dl_call_back(bot, update):
                     )
                 )
             elif tg_send_type == "file":
-                await update.message.reply_to_message.reply_chat_action("upload_document")
                 await bot.send_document(
                     chat_id=update.message.chat.id,
                     document=download_directory,
                     thumb=thumb_image_path,
                     caption=description,
                     parse_mode="HTML",
-                    reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('⚙ Join Updates Channel ⚙', url='https://telegram.me/tellybots_4u')]]),
+                    # reply_markup=reply_markup,
                     reply_to_message_id=update.message.reply_to_message.message_id,
                     progress=progress_for_pyrogram,
                     progress_args=(
@@ -269,8 +278,6 @@ async def youtube_dl_call_back(bot, update):
                     )
                 )
             elif tg_send_type == "vm":
-                await update.message.reply_to_message.reply_chat_action("upload_video_note")
-                
                 await bot.send_video_note(
                     chat_id=update.message.chat.id,
                     video_note=download_directory,
@@ -286,7 +293,6 @@ async def youtube_dl_call_back(bot, update):
                     )
                 )
             elif tg_send_type == "video":
-                await update.message.reply_to_message.reply_chat_action("upload_video")
                 await bot.send_video(
                     chat_id=update.message.chat.id,
                     video=download_directory,
@@ -296,7 +302,7 @@ async def youtube_dl_call_back(bot, update):
                     width=width,
                     height=height,
                     supports_streaming=True,
-                    reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('⚙ Join Updates Channel ⚙', url='https://telegram.me/tellybots_4u')]]),
+                    # reply_markup=reply_markup,
                     thumb=thumb_image_path,
                     reply_to_message_id=update.message.reply_to_message.message_id,
                     progress=progress_for_pyrogram,
@@ -312,7 +318,7 @@ async def youtube_dl_call_back(bot, update):
             time_taken_for_upload = (end_two - end_one).seconds
 
             media_album_p = []
-            if Config.SCREENSHOTS:
+            if Config.SCREENSHOTS=="True":
                 if images is not None:
                     i = 0
                     caption = ""
