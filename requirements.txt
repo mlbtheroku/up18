@@ -13,3 +13,4 @@ requests
 tgcrypto
 yt-dlp
 lk21
+filetype
