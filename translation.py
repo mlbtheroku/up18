@@ -34,9 +34,9 @@ class Translation(object):
  **👥 <b>Channel :** [Fayas Noushad](https://telegram.me/tellybots_4u)</b>\n
  **❄️ <b>Credits :** Everyone in this journey</b>\n
  **🍴 <b>Source :** [Click here](https://t.me/tellybots_digital)</b>\n
- **📝 <b>Language :** [Python3](https://python.org)\n
- **📚 <b>Library :** [Pyrogram v1.2.0](https://pyrogram.org)\n
- **🌟 <b>Server :** [Heroku](https://heroku.com)\n
+ **📝 <b>Language :** [Python3](https://python.org)</b>\n
+ **📚 <b>Library :** [Pyrogram v1.2.0](https://pyrogram.org)</b>\n
+ **🌟 <b>Server :** [Heroku](https://heroku.com)</b>\n
 """
     START_BUTTONS = InlineKeyboardMarkup(
         [[
