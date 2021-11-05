@@ -57,4 +57,4 @@ class Config(object):
     # Sql Database url
     DB_URI = os.environ.get("DATABASE_URL", "")
     
-#Under Maintainence
+
