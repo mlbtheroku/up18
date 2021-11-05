@@ -1,3 +1,4 @@
+
 import logging
 logging.basicConfig(level=logging.DEBUG,
                     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
@@ -187,7 +188,7 @@ async def youtube_dl_call_back(bot, update):
             )
         else:
             if Config.SCREENSHOTS:
-                is_w_f = False
+                is_w_f = True
                 images = await generate_screen_shots(
                     download_directory,
                     tmp_directory_for_each_user,
@@ -200,7 +201,7 @@ async def youtube_dl_call_back(bot, update):
                 await bot.edit_message_text(text=Translation.UPLOAD_START, chat_id=update.message.chat.id, message_id=update.message.message_id)
             except:
                 pass
-            # get the correct width, , height, and duration for videos greater than 10MB
+            # get the correct width, height, and duration for videos greater than 10MB
             width = 0
             height = 0
             duration = 0
