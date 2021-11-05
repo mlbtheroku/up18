@@ -12,3 +12,4 @@ feedparser
 requests
 tgcrypto
 yt-dlp
+lk21
