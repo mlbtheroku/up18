@@ -44,7 +44,7 @@ async def save_photo(bot, update):
 @Client.on_message(filters.private & filters.command(["delthumb"]))
 async def delete_thumbnail(bot, update):
     thumb_image_path = Config.DOWNLOAD_LOCATION + "/" + str(update.from_user.id) + ".jpg"
-    download_location = Config.DOWNLOAD_LOCATION + "/" + str(update.from_user.id)
+    #download_location = Config.DOWNLOAD_LOCATION + "/" + str(update.from_user.id)
     try:
         await sql.del_thumb(update.from_user.id)
         os.remove(thumb_image_path)
