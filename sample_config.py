@@ -57,4 +57,5 @@ class Config(object):
     # Sql Database url
     DB_URI = os.environ.get("DATABASE_URL", "")
     
-
+    # @
+    DOWNLOAD_DIRECTORY = os.environ.get("DOWNLOAD_DIRECTORY", "./DOWNLOADS")
